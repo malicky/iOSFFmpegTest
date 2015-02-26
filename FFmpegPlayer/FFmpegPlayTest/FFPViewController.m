@@ -76,42 +76,24 @@
 
 -(IBAction)load:(id)sender
 {
-
     NSString *fileName = @"big-buck-bunny_trailer";
-    NSString *fileType = @"webm";
-    
-    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] ;
-    NSString* savePath = [documentPath stringByAppendingPathComponent:fileName];
-    NSLog(@"%@", savePath);
+    NSString *fileType = @".webm";
+  
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error = nil;
     
-    // if fileName of type fileType exist
-    if ([fileManager fileExistsAtPath:savePath] == YES) {
-        // delete it
-        [fileManager removeItemAtPath:savePath error:&error];
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] ;
+    NSString* fullName = [documentPath stringByAppendingPathComponent:fileName];
+    fullName = [fullName stringByAppendingString:fileType];
+    NSLog(@"%@", fullName);
+    
+ 
+    if ([fileManager fileExistsAtPath:fullName] == YES) {
+        NSURL *fileURL = [NSURL fileURLWithPath:fullName];
+        moviePlayer = [[FFMoviePlayerController alloc] initWithContentURL: fileURL];
+    } else {
+        NSLog(@"file dont exist !!!");
     }
-    
-    // check the file was not already copied into the Documents folder
-    if ([fileManager fileExistsAtPath:savePath] == NO)
-    {
-        // copy the file from main app bundle to Document folder
-        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
-        [fileManager copyItemAtPath:resourcePath toPath:savePath error:&error];
-        NSLog(@"\nfile: %@ \n copied from : %@ \nto:\n %@", fileName, resourcePath, savePath);
-    }
-    
-    if (error == nil) {
-        if ([fileManager fileExistsAtPath:savePath] == YES) {
-            NSURL *savePathURL = [NSURL fileURLWithPath:savePath];
-            moviePlayer = [[FFMoviePlayerController alloc] initWithContentURL: savePathURL];
-        } else {
-            NSLog(@"Test video file failed!!");
-        }
-    }
-    
-
     
     //TODO:Remenmber to send notification to notificationCenter in FFMoviePlayerController
     [[NSNotificationCenter defaultCenter] addObserver:self

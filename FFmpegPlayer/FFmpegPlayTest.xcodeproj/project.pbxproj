@@ -99,8 +99,6 @@
 		04E6E92E1667261300EEF6A3 /* GLShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589B691647A234001F4C02 /* GLShader.m */; };
 		04E6E92F1667263600EEF6A3 /* FFMoviePlayerController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 04BCB0B616439EF3005B8582 /* FFMoviePlayerController.h */; };
 		04FC8B4B16507A1200354D88 /* FFVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FC8B4A16507A1200354D88 /* FFVideo.m */; };
-		130BDB6D1A9E0AC10083570C /* output.ts in Resources */ = {isa = PBXBuildFile; fileRef = 130BDB6C1A9E0AC10083570C /* output.ts */; };
-		130BDB6F1A9E0D530083570C /* big-buck-bunny_trailer.webm in Resources */ = {isa = PBXBuildFile; fileRef = 130BDB6E1A9E0D530083570C /* big-buck-bunny_trailer.webm */; };
 		84D080E51655326F003AE91E /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D080DE1655326F003AE91E /* libavcodec.a */; };
 		84D080E61655326F003AE91E /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D080DF1655326F003AE91E /* libavdevice.a */; };
 		84D080E71655326F003AE91E /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D080E01655326F003AE91E /* libavfilter.a */; };
@@ -211,8 +209,6 @@
 		04E6E91A166725A200EEF6A3 /* libFFMoviePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libFFMoviePlayer.m; sourceTree = "<group>"; };
 		04FC8B4916507A1200354D88 /* FFVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFVideo.h; sourceTree = "<group>"; };
 		04FC8B4A16507A1200354D88 /* FFVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFVideo.m; sourceTree = "<group>"; };
-		130BDB6C1A9E0AC10083570C /* output.ts */ = {isa = PBXFileReference; lastKnownFileType = file; path = output.ts; sourceTree = "<group>"; };
-		130BDB6E1A9E0D530083570C /* big-buck-bunny_trailer.webm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "big-buck-bunny_trailer.webm"; sourceTree = "<group>"; };
 		84D080DE1655326F003AE91E /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "../ffmpeg-uarch/lib/libavcodec.a"; sourceTree = "<group>"; };
 		84D080DF1655326F003AE91E /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = "../ffmpeg-uarch/lib/libavdevice.a"; sourceTree = "<group>"; };
 		84D080E01655326F003AE91E /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = "../ffmpeg-uarch/lib/libavfilter.a"; sourceTree = "<group>"; };
@@ -341,8 +337,6 @@
 		049AC630162D25B000C28A50 = {
 			isa = PBXGroup;
 			children = (
-				130BDB6E1A9E0D530083570C /* big-buck-bunny_trailer.webm */,
-				130BDB6C1A9E0AC10083570C /* output.ts */,
 				049AC645162D25B000C28A50 /* FFmpegPlayTest */,
 				04C16B941655CA9E0034567F /* FFmpeg libs */,
 				04E6E915166725A200EEF6A3 /* libFFMoviePlayer */,
@@ -614,8 +608,6 @@
 				04C16BC8165B64910034567F /* rgb_render.vsh in Resources */,
 				04C16BC9165B64960034567F /* rgb_render.fsh in Resources */,
 				04BE2B0B165375DC00603B1F /* test.ts in Resources */,
-				130BDB6D1A9E0AC10083570C /* output.ts in Resources */,
-				130BDB6F1A9E0D530083570C /* big-buck-bunny_trailer.webm in Resources */,
 				04D73F84166DDC18001B2C38 /* yuv_render.fsh in Resources */,
 				04D73F85166DDC18001B2C38 /* yuv_render.vsh in Resources */,
 			);
